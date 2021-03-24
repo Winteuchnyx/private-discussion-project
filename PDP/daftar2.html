@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="in-ID">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PDP~Private Discussion Project</title>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/style.css">
+        <script src="bootstrap-3.3.7-dist/jquery-3.2.1.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <style>
+            body
+            {
+                margin:auto 10px;
+            }
+            header
+            {
+                display: block;
+                text-align: center;
+                background-color:darkslateblue;
+                font-size: 30px;
+                margin:0%;
+                color: chartreuse;
+                overflow: hidden;
+                position: relative;
+            }
+            .navbar {
+                margin-bottom: 0;
+                background-color: orangered;
+                z-index: 9999;
+                border: 0;
+                font-size: 12px !important;
+                line-height: 1.42857143 !important;
+                letter-spacing: 4px;
+                border-radius: 0;
+            }
+
+            .navbar li a, .navbar .navbar-brand {
+                color: #fff !important;
+            }
+
+            .navbar-nav li a:hover, .navbar-nav li.active a {
+                color: mediumturquoise !important;
+                background-color: #111 !important;
+            }
+
+            .navbar-default .navbar-toggle {
+                border-color: transparent;
+                color: #111 !important;
+            }
+            nav ul
+            {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;    
+                overflow: hidden;
+            }
+            li#login
+            {
+                float:right;
+            }
+            li#daftar
+            {
+                float: left;
+            }
+            article
+            {
+                background-color: aquamarine;
+                overflow: auto;
+                padding: 20px;
+            }
+            footer
+            {
+                /*display:block;*/
+                text-align: center;
+                background-color:darkslateblue;
+                padding: 20px;
+                margin:0%;
+                color: chartreuse;
+                position: fixed;
+                bottom:0;
+                left:0;
+                right:0;
+            }
+            .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+   @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+   }
+   table,td,tr{
+       margin:auto;
+   }
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron">
+        <header>
+        <h1>Private Discussion Project</h1>
+        </header>
+        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" value="data" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="logo.png" target="_blank"><img src="logo.png" height="300%" width="135%" style="overflow:auto;position:relative;left:0;"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" style="margin-left:1%;">
+                <li><a href="index.html" target="_self">Laman Awal</a></li>
+                <li><a href="tentang kami.html" target="_self">Tentang</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" action="cek nim.php" method="POST">
+      <div class="input-group">
+        <input type="text" name="nomor" class="form-control" placeholder="Mengecek NIM">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="login"><a href="signup.php" target="_self"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li id="daftar"  class="active"><a href="daftar.html" target="_self"><span class="glyphicon glyphicon-user"></span> Daftar</a></li>
+            </ul>
+                    </div>
+            </div>
+        </nav>
+        <label style="width: 50%;height: 50%;position:relative;left:25%;right:25%;">
+            <div style="border:2px solid black;padding: 5px;margin:auto;outline:1px solid grey;">
+            <legend>Masukkan semua yang diminta</legend>
+            <form action="insert.php" method="POST">
+                <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td> 
+                        <td><input type="text" name="nama" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td> 
+                        <td>:</td>
+                        <td><input type="email" name="email" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis kelamin</td>
+                        <td>:</td> 
+                        <td>
+                            <input type="radio" name="jenis" value="laki-laki" required/>Laki-laki
+                            <input type="radio" name="jenis" value="perempuan" required/>Perempuan
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Username</td> 
+                        <td>:</td>
+                        <td><input type="text" name="username" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td> 
+                        <td>:</td>
+                        <td><input type="text" name="password" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="submit" style="float:right;"></td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+        </label>
+        <hr>
+        <p style="text-align:center;">Nama yang anda masukkan sekarang ini akan menjadi nama anda di forum,username dan password hanya untuk login. Sisanya hanya validasi data anda sahaja. Setelah ini anda sudah bisa login.</p>
+        <p style="text-align:center;">NB: nama,email dan username masing-masing user tidak boleh sama. kami gunakan untuk melimitasi pendaftaran akun baru secara liar.</p>
+         <footer class="container-fluid text-center">
+            Hakcipta &copy; Milik: Winto Junior Khosasih dan Robby Walsen
+        </footer>
+    </body>
+</html>

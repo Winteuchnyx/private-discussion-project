@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="in-ID">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PDP~Private Discussion Project</title>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/style.css">
+        <script src="bootstrap-3.3.7-dist/jquery-3.2.1.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <style>
+           
+            .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+   @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+   }
+   .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
+}
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron">
+        <header>
+        <h1>Private Discussion Project</h1>
+        </header>
+        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" value="data" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="logo.png" target="_blank"><img src="logo.png" height="300%" width="135%" style="overflow:auto;position:relative;left:0;"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" style="margin-left:1%;">
+                <li class="active"><a href="login.html" target="_self">Laman Awal</a></li>
+                <li><a href="tentang kami.html" target="_self">Tentang</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" action="cek nim.php" method="POST">
+      <div class="input-group">
+        <input type="text" name="nomor" class="form-control" placeholder="Mengecek NIM">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="login"><a href="signup.php" target="_self"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li id="daftar"><a href="daftar.html" target="_self"><span class="glyphicon glyphicon-user"></span> Daftar</a></li>
+            </ul>
+                    </div>
+            </div>
+        </nav>
+        <div id="myCarousel"class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="daftar.png">
+                    <div class="carousel-caption">
+                        <h3>Menu daftar</h3>
+                        <p>Jika pada kotak pencarian dimenu awal menemukan NIM anda terdaftar maka anda dipastikan dapat melewati verifikasi awal menuju menu daftar.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="login.png">
+                    <div class="carousel-caption">
+                        <h3>Menu Login</h3>
+                        <p>Setelah melakukan pendaftaran atau sudah memiliki akun, anda dapat melewati fase login ini sesuai dengan pass dan username yang terdaftar</p> 
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="forum.png">
+                    <div class="carousel-caption">
+                        <h3>Menu Interface</h3>
+                        <p>Menu interface terdapat berbagai navigasi untuk melakukan chatting dan diskusi group.</p> 
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container text-center">
+    <h3>Apa saja yang kami lakukan?</h3><br/>
+        <article>
+            <h1>Private Discussion Project</h1>
+            <p>Laman web ini hanya merupakan penjelasan saja, untuk menggunakan anda harus daftar(sign up),lalu login jika sudah daftar.Namun karena fiturnya sangat terbatas. Untuk mendaftar anda harus memiliki persetujuan dari admin terlebih dahulu.</p>
+            <p>pada saat daftar anda akan diminta memasukkan identitas anda,jika sudah ada dimasukkan izin oleh admin,anda akan langsung masuk ke form pendaftaran. setelah itu akan dihasilkan username dan password untuk login buatan anda sendiri.</p>
+            <p><b>Target:</b> Kami ingin membuat sistem client-server sederhana yang melayani pengiriman informasi berupa kata, membuat group private serta general group, beserta navigasinya.</p>
+            <p><b>Cara Kerja: </b>baik client maupun server harus terhubung,client harus menemukan cara untuk terhubung ke server melalui internet ataupun jaringan LAN yang ada server PDPnya. Sementara,server akan mengatur aliran data dari client ke server ke client. Dimana untuk mendapatkan hasil pihak server harus online secara realtime.</p> 
+        </article>
+        <div class="row">
+            <div class="col-sm-6">
+                <img  src="utama.png" class="img-responsive" style="width:100%" alt="Image">
+                <h4>Project halaman saat ini</h4>
+                <p> hanya sebagai interface pengenalan/ muka </p>
+            </div>
+            <div class="col-sm-6">
+                <img  src="daftar.png" class="img-responsive" style="width:100%" alt="Image">
+                <h4>Project interface daftar</h4>
+                <p> Sebagai pengenal client serta limitasi client </p>
+            </div>
+        </div>
+            <div="row">
+                <div class="col-sm-6">
+                <img  src="login.png" class="img-responsive" style="width:100%" alt="Image">
+                <h4>Project Login</h4>
+                <p> Sebagai pengaman(no intruder) sekalgius pengindetifier antara client ke server </p>
+            </div>
+            <div class="col-sm-6">
+                <img  src="forum.png" class="img-responsive" style="width:100%" alt="Image">
+                <h4>Project Interface Utama</h4>
+                <p> Merupakan Halaman Interface yang menjadi inti dari project ini. </p>
+            </div>
+        </div>
+        <footer class="container-fluid text-center">
+            Hakcipta &copy; Milik: Winto Junior Khosasih dan Robby Walsen
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+body
+            {
+                margin:auto 10px;
+				background-color:#ccccff;
+            }
+            header
+            {
+                display: block;
+                text-align: center;
+                background-color:#0000cc;
+                font-size: 30px;
+                margin:0%;
+                color: #33ccff;
+                overflow: hidden;
+                position: relative;
+            }
+            .navbar {
+                margin-bottom: 0;
+                background-color: #000080;
+                z-index: 9999;
+                border: 0;
+                font-size: 12px !important;
+                line-height: 1.42857143 !important;
+                letter-spacing: 4px;
+                border-radius: 0;
+            }
+
+            .navbar li a, .navbar .navbar-brand {
+                color: #ffffff !important;
+				
+            }
+
+            .navbar-nav li a:hover, .navbar-nav li.active a {
+                color: #00ffff !important;
+                background-color: #000066 !important;
+            }
+
+            .navbar-default .navbar-toggle {
+                border-color: transparent;
+                color: #111 !important;
+            }
+            nav ul
+            {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;    
+                overflow: hidden;
+            }
+            li#login
+            {
+                float:right;
+            }
+            li#daftar
+            {
+                float: left;
+            }
+            article
+            {
+                background-color: aquamarine;
+                overflow: auto;
+                padding: 20px;
+            }
+            footer
+            {
+               
+                text-align: center;
+                background-color:#0000cc;
+                padding: 20px;
+                margin:0%;
+                color: #33ccff;
+            }
